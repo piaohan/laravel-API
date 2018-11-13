@@ -21,4 +21,9 @@
         Route::get('/user', function (Request $requset) {
             return $requset->user();
         });
+
     });
+
+    Route::get('/cafes', 'API\cafesController@getCafes');
+    Route::post('/cafes', 'API\CafesController@postNewCafe');
+    Route::get('/cafes/{id}', 'API\CafesController@getCafe');
